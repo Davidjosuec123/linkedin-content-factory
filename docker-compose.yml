@@ -5,9 +5,10 @@ services:
       dockerfile: Dockerfile
     volumes:
       - sqlite_data:/app
-    env_file:
-      - ./backend/.env
     environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.3-70b-versatile}
+      - WHISPER_MODEL=${WHISPER_MODEL:-base}
       - DATABASE_URL=sqlite:///./content_factory.db
 
   frontend:
