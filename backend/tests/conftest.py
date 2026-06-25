@@ -43,14 +43,12 @@ def mock_groq(mocker):
 
 @pytest.fixture
 def mock_whisper(mocker):
+    segment = MagicMock()
+    segment.text = "Hoy trabajé en un flujo de n8n para un cliente inmobiliario. El webhook no manejaba respuestas vacías de Messenger y los leads se perdían."
     mock_model = MagicMock()
-    mock_model.transcribe.return_value = {
-        "text": "Hoy trabajé en un flujo de n8n para un cliente inmobiliario. El webhook no manejaba respuestas vacías de Messenger y los leads se perdían."
-    }
-    mock_whisper = MagicMock()
-    mock_whisper.load_model.return_value = mock_model
-    mocker.patch("transcription.whisper", mock_whisper)
-    return mock_whisper
+    mock_model.transcribe.return_value = ([segment], MagicMock())
+    mocker.patch("transcription.WhisperModel", return_value=mock_model)
+    return mock_model
 
 
 @pytest.fixture
