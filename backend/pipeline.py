@@ -1,7 +1,7 @@
 import uuid
 import json
 import logging
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Optional
 
 from transcription import transcribe_audio
@@ -24,7 +24,7 @@ def _build_result(session_id, raw_structure, linkedin_post, design_guide):
     logger.info("[%s] Pipeline completed successfully", session_id)
     return SessionResponse(
         session_id=session_id,
-        timestamp=datetime.utcnow().isoformat(),
+        timestamp=datetime.now(timezone.utc).isoformat(),
         raw_structure=raw_structure,
         linkedin_post=linkedin_post,
         design_guide=DesignGuide(**design_guide),

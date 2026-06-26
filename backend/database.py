@@ -1,7 +1,7 @@
 import sqlite3
 import json
 import re
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Optional
 from config import settings
 
@@ -42,7 +42,7 @@ def save_session(session_id: str, audio_filename: str):
     conn = get_connection()
     conn.execute(
         "INSERT INTO sessions (session_id, timestamp, status, audio_filename) VALUES (?, ?, ?, ?)",
-        (session_id, datetime.utcnow().isoformat(), "processing", audio_filename),
+        (session_id, datetime.now(timezone.utc).isoformat(), "processing", audio_filename),
     )
     conn.commit()
     conn.close()

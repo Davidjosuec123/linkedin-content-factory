@@ -1,7 +1,9 @@
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
+    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
+
     groq_api_key: str = ""
     groq_model: str = "llama-3.3-70b-versatile"
     max_tokens_extractor: int = 1500
@@ -12,10 +14,6 @@ class Settings(BaseSettings):
     temperature_designer: float = 0.3
     database_url: str = "sqlite:///./content_factory.db"
     whisper_model: str = "base"
-
-    class Config:
-        env_file = ".env"
-        env_file_encoding = "utf-8"
 
 
 settings = Settings()
