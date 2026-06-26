@@ -14,6 +14,7 @@ module.exports = {
           DEFAULT: "#0D0D0D",
           2: "#1A1A1A",
           3: "#2A2A2A",
+          4: "#3A3A3A",
         },
       },
     },
