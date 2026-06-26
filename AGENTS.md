@@ -134,29 +134,37 @@ Redactar un post de LinkedIn de alto impacto que:
 3. Atraiga clientes de sectores específicos (inmobiliario, clínicas, agencias AI) mostrando autoridad técnica aplicada
 4. Eduque a otros emprendedores/constructores de sistemas con lógica real
 
-ESTILO OBLIGATORIO:
-- Tono: Estilo MBA + Extreme Ownership + Teoría de Restricciones. Directo, limpio, sin adornos.
-- Voz: Primera persona. Verbos de acción en modo currículo: Identifiqué, Optimicé, Implementé, Diagnostiqué, Procesé, Eliminé, Construí, Reduje, Documenté, Automaticé, Validé.
+ESTILO OBLIGATORIO — FORMATO LINKEDIN ESCANEABLE:
+- Tono: MBA + Extreme Ownership + Teoría de Restricciones. Directo, sin adornos.
+- Voz: Primera persona. Verbos de acción: Identifiqué, Optimicé, Implementé, Diagnostiqué, Procesé, Eliminé, Construí, Reduje, Documenté, Automaticé, Validé.
 - Densidad: Cada línea debe tener peso. Sin relleno. Sin inflación emocional.
-- Formato: Sin bullets genéricos. Párrafos cortos o líneas sueltas de impacto. Una sola línea de cierre reflexiva.
 
-ESTRUCTURA DEL POST (seguir este esquema):
+ESTRUCTURA DEL POST — FORMATO OBLIGATORIO:
 
-[HOOK — 1 línea máx.]
-La restricción del día, planteada como hecho concreto. Sin pregunta retórica ni clickbait.
+[HOOK — 1 línea]
+La restricción del día, planteada como hecho concreto. Obligar a hacer clic en "ver más".
 
-[CONTEXTO — 2-3 líneas]
+[CONTEXTO — 2-3 líneas cortas]
 Qué sistema, qué sector, qué se estaba construyendo o solucionando.
+Separar ideas con saltos de línea. Máximo 3 líneas por bloque.
 
-[PROCESO — 3-5 líneas]
+[PROCESO — 3-5 líneas cortas]
 Qué se diagnosticó. Qué herramientas se usaron. Qué decisión se tomó y por qué.
-Nombrar las herramientas explícitamente (n8n, Airtable, Gemini, etc.) — esto es credibilidad técnica.
+Nombrar herramientas explícitamente (n8n, Airtable, Gemini, etc.) — credibilidad técnica.
+Separar ideas con saltos de línea. Máximo 3 líneas por bloque.
 
 [RESULTADO O APRENDIZAJE — 2-3 líneas]
 Qué cambió. Si no se resolvió, qué se aprendió y qué sigue.
 
-[CIERRE — 1 línea]
-Reflexión estratégica o principio aplicado. Nunca un call-to-action genérico ("¿qué opinas?", "comparte si te gustó").
+[CTA — 1 línea]
+Pregunta abierta o invitación a comentar para impulsar el algoritmo.
+
+FORMATO VISUAL OBLIGATORIO:
+- Párrafos de 1 a 3 líneas máximo. NUNCA bloques densos.
+- Abundancia de espacios en blanco entre ideas (saltos de línea continuos).
+- Emojis estratégicos como viñetas o iconos visuales para guiar al lector y destacar puntos clave (NO decorativos).
+- Negritas en conceptos clave y herramientas mencionadas.
+- Cada idea en su propia línea o párrafo corto.
 
 RESTRICCIONES ABSOLUTAS — NUNCA usar:
 - "La IA acaba de matar a [herramienta]"
@@ -164,9 +172,9 @@ RESTRICCIONES ABSOLUTAS — NUNCA usar:
 - "El futuro de [X] es..."
 - "Esto cambiará todo"
 - "Gurú", "ninja", "maestro", "hack"
-- Emojis en exceso (máximo 2, solo si añaden claridad, nunca decorativos)
+- Párrafos de más de 3 líneas
+- Bloques de texto denso sin saltos de línea
 - Hashtags genéricos (#emprendimiento #motivación #éxito)
-- Preguntas de engagement vacías al final
 - Lenguaje de coach motivacional
 
 HASHTAGS PERMITIDOS (máximo 4, al final del post):
@@ -184,11 +192,15 @@ OUTPUT FORMAT — responde ÚNICAMENTE con el texto del post, listo para pegar e
 **✅ BIEN (estilo David / Acacia Systems):**
 > El webhook caía en silencio. Sin error. Sin alerta. Solo leads que nunca llegaban a Airtable.
 >
-> Diagnostiqué el flujo en n8n: el nodo HTTP no manejaba respuestas vacías de Messenger. Cuello de botella clásico — el sistema parecía funcionar pero el throughput era cero.
+> 🔍 Diagnostiqué el flujo en **n8n**: el nodo HTTP no manejaba respuestas vacías de Messenger. Cuello de botella clásico — el sistema parecía funcionar pero el throughput era cero.
 >
-> Implementé validación de payload antes del split. Agregué un nodo de log en Telegram para visibilidad inmediata. Cero leads perdidos desde esa modificación.
+> ✅ Implementé validación de payload antes del split. Agregué un nodo de log en Telegram para visibilidad inmediata.
+>
+> 📊 Cero leads perdidos desde esa modificación.
 >
 > Un sistema que no alerta sus fallos no es un sistema. Es una ilusión de automatización.
+>
+> ¿Qué sistemas estás construyendo hoy? Cuéntame en los comentarios 👇
 >
 > #AcaciaSystems #n8n #AutomatizaciónIA #BuildInPublic
 
