@@ -10,3 +10,6 @@ __pycache__/
 out/
 dist/
 .DS_Store
+.vercel/**
+!.vercel/repo.json
+.env*

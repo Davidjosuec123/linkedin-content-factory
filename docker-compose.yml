@@ -11,14 +11,5 @@ services:
       - WHISPER_MODEL=${WHISPER_MODEL:-base}
       - DATABASE_URL=sqlite:///./content_factory.db
 
-  frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-    environment:
-      - API_PROXY_TARGET=http://backend:8000
-    depends_on:
-      - backend
-
 volumes:
   sqlite_data:
